@@ -1,0 +1,121 @@
+/**
+ * @name UI Refresh Refresh
+ * @author programmer2514
+ * @description Enjoy Discord's UI refresh without the visual inconsistencies.
+ * @version 1.0.0
+ */
+
+[class*="sidebarListRounded"],
+[class*="sidebar"] {
+    border-radius: 0 !important;
+}
+
+[class*="sidebar"] [class*="guilds"] {
+    border-top: 1px solid var(--border-subtle);
+}
+
+[class*="itemsContainer"] [class*="scrollerBase"] {
+    padding-top: var(--space-xs);
+}
+
+[data-windows] [class*="title"]:has(> [class*="title"]) {
+    justify-content: start;
+    margin-left: var(--space-xs);
+}
+
+[data-windows] [class*="title"] > [class*="title"] div:last-child::before {
+    content: "Discord - ";
+}
+
+[class*="winButtons"] {
+    gap: 0;
+}
+
+[class*="winButtons"]::before {
+    padding-right: calc(var(--space-xs) / 2);
+}
+
+[class*="winButtons"] [class*="winButton"] {
+    padding: 0 calc(var(--space-xs) / 2);
+}
+
+[class*="recentsIcon"] {
+    transform: translateX(calc(var(--space-xs) / 2));
+}
+
+[class*="channelTextArea"] {
+    margin-bottom: var(--space-xs);
+}
+
+[class*="channelTextArea"] > [class*="scrollableContainer"] {
+    background: var(--bg-overlay-floating,var(--background-base-low))
+}
+
+[class*="channelTextArea"]:last-child [class*="inner"] > * {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+[class*="formWithLoadedChatInput"]:has(> [class*="typing"]) {
+    padding-top: calc((var(--space-xs) * 4));
+}
+
+[class*="formWithLoadedChatInput"] > [class*="typing"] {
+    margin-bottom: calc(var(--custom-channel-textarea-text-area-height) + (var(--space-xs) * 2));
+}
+
+[class*="chatLayerWrapper"] {
+    position: absolute;
+    z-index: 100;
+}
+
+[class*="threadSidebarOpen"] ~ [class*="chatLayerWrapper"] {
+    top: var(--custom-channel-header-height) !important;
+    height: calc(100% - var(--custom-channel-header-height)) !important;
+}
+
+[class*="chatLayerWrapper"] > * {
+    border-radius: 0;
+    width: 450px;
+}
+
+[class*="chatLayerWrapper"] [class*="floating"] {
+    filter: none;
+}
+
+[class*="chatLayerWrapper"] > [class*="resizeHandle"] {
+    display: none;
+}
+
+div:not([class])[style^="min-width"] {
+    display: none;
+}
+
+section[class*="container"] {
+    padding-left: var(--space-xs) !important;
+}
+
+main > section[class*="container"] {
+    border-left: 1px solid var(--border-subtle);
+}
+
+[data-member-id][class*="outer"]:has([id*="uid"]) > [class*="inner"] {
+    border-left: 1px solid var(--border-subtle);
+}
+
+[data-member-id][class*="outer"]:has([id*="uid"]):not(.custom-profile-theme) > [class*="inner"] {
+    background-color: var(--background-tertiary) !important;
+}
+
+@media (min-width: 1216px) {
+    [class*="threadSidebarOpen"] > [class*="content"] > * {
+        flex-shrink: 100;
+    }
+
+    [class*="threadSidebarOpen"] > [class*="content"]::after {
+        content: "";
+        display: block;
+        width: 450px;
+        height: 100%;
+    }
+}
