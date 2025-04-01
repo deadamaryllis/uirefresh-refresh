@@ -2,8 +2,12 @@
  * @name UI Refresh Refresh
  * @author programmer2514
  * @description Enjoy Discord's UI refresh without the visual inconsistencies.
- * @version 1.0.1
+ * @version 1.1.0
  */
+
+.visual-refresh {
+    --custom-guild-list-padding: min(var(--space-sm));
+}
 
 .sidebarListRounded_c48ade,
 .sidebar_c48ade {
@@ -56,12 +60,15 @@
     padding-bottom: 2px;
 }
 
-.form_f75fb0:has(> .typing_b88801) {
-    padding-top: calc((var(--space-xs) * 4));
+.scrollerSpacer__36d07 {
+    height: var(--space-32) !important;
 }
 
 .typing_b88801 {
-    top: calc(var(--space-xs) / 3 * 2);
+    top: calc(0px - var(--space-24));
+    left: 0 !important;
+    background: var(--background-secondary);
+    padding-left: var(--space-16);
 }
 
 .chatLayerWrapper__01ae2 {
@@ -76,7 +83,7 @@
 
 .chatLayerWrapper__01ae2 > * {
     border-radius: 0;
-    width: 450px !important;  /* Remove for CollapsibleUI compatibility */
+    width: 450px !important;
 }
 
 .floating__01ae2 {
@@ -95,18 +102,6 @@ section.container__9293f {
     padding-left: var(--space-xs) !important;
 }
 
-main > section.container__9293f {
-    border-left: 1px solid var(--border-subtle);
-}
-
-.inner_c0bea0 {
-    border-left: 1px solid var(--border-subtle);
-}
-
-.biteSize_c0bea0 .inner_c0bea0 {
-    border-left: none;
-}
-
 .outer_c0bea0:not(.custom-profile-theme) > .inner_c0bea0 {
     background-color: var(--background-tertiary) !important;
 }
@@ -120,6 +115,65 @@ main > section.container__9293f {
 div:has(> .wrapper__1405b) {
     flex-shrink: 0 !important;
     max-width: 100%;
+}
+
+.contentRegion__23e6b,
+.contentRegionScroller__23e6b {
+    background: var(--background-secondary) !important;
+}
+
+.top_b3f026 {
+    gap: var(--space-xl);
+    max-width: 100%;;
+}
+
+.top_b3f026 > .item_b3f026 {
+    margin: 0 !important;
+    padding: 0 var(--space-xxs) var(--space-sm) !important;
+}
+
+.settingsPage_f131e9 > h3 {
+    font-size: 20px;
+}
+
+.container_dc2e0e::before {
+    content: "Family Center";
+    font-family: var(--font-display);
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 600;
+    color: var(--header-primary);
+    margin-bottom: 32px;
+}
+
+.item__001a7 {
+    border: 1px solid var(--input-border);
+    background: var(--input-background);
+}
+
+#profile-customization-tab h2 {
+    color: var(--header-primary)
+}
+
+.theme-midnight main > section.container__9293f {
+    border-left: 1px solid var(--border-subtle);
+}
+
+.theme-midnight .panel_c0bea0 .inner_c0bea0 {
+    border-left: 1px solid var(--border-subtle);
+}
+
+.theme-midnight .sidebarRegion__23e6b {
+    border-right: 1px solid var(--border-subtle);
+}
+
+.theme-midnight .accountProfileCard__1fed1 {
+    border: 1px solid var(--border-subtle);
+}
+
+.theme-midnight .biteSize_c0bea0 .inner_c0bea0 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
 }
 
 @media (min-width: 1216px) {
