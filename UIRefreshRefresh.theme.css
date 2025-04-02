@@ -2,7 +2,7 @@
  * @name UI Refresh Refresh
  * @author programmer2514
  * @description Enjoy Discord's UI refresh without the visual inconsistencies.
- * @version 1.1.0
+ * @version 1.1.1
  */
 
 .visual-refresh {
@@ -117,11 +117,6 @@ div:has(> .wrapper__1405b) {
     max-width: 100%;
 }
 
-.contentRegion__23e6b,
-.contentRegionScroller__23e6b {
-    background: var(--background-secondary) !important;
-}
-
 .top_b3f026 {
     gap: var(--space-xl);
     max-width: 100%;;
@@ -130,6 +125,11 @@ div:has(> .wrapper__1405b) {
 .top_b3f026 > .item_b3f026 {
     margin: 0 !important;
     padding: 0 var(--space-xxs) var(--space-sm) !important;
+}
+
+.contentRegion__23e6b,
+.contentRegionScroller__23e6b {
+    background: var(--background-secondary) !important;
 }
 
 .settingsPage_f131e9 > h3 {
@@ -153,6 +153,17 @@ div:has(> .wrapper__1405b) {
 
 #profile-customization-tab h2 {
     color: var(--header-primary)
+}
+
+.bd-addon-card,
+.bd-store-card,
+.bd-addon-store-card {
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--border-subtle);
+}
+
+.bd-links {
+    gap: var(--space-xs);
 }
 
 .theme-midnight main > section.container__9293f {
