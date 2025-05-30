@@ -2,8 +2,17 @@
  * @name UI Refresh Refresh
  * @author programmer2514
  * @description Enjoy Discord's UI refresh without the visual inconsistencies.
- * @version 1.1.1
+ * @version 1.2.0
  */
+
+:root {
+    --uirr-forum-panel-width: 450px;
+}
+
+*[class] {
+    --app-border-frame: var(--border-subtle);
+    --border-faint: var(--border-subtle);
+}
 
 .visual-refresh {
     --custom-guild-list-padding: min(var(--space-sm));
@@ -12,17 +21,19 @@
 .sidebarListRounded_c48ade,
 .sidebar_c48ade {
     border-radius: 0 !important;
+    border-left: none !important;
 }
 
 .guilds_c48ade {
     border-top: 1px solid var(--border-subtle);
+    border-right: 1px solid var(--border-subtle);
 }
 
-.scroller_ef3116 {
-    padding-top: var(--space-xs) !important;
+.tree_ef3116 {
+    padding-top: var(--space-sm) !important;
 }
 
-.title_c38106 {
+[data-windows="true"] .title_c38106 {
     justify-content: start;
     margin-left: var(--space-xs);
 }
@@ -83,7 +94,8 @@
 
 .chatLayerWrapper__01ae2 > * {
     border-radius: 0;
-    width: 450px !important;
+    width: var(--uirr-forum-panel-width) !important;
+    transition: width var(--cui-transition-speed);
 }
 
 .floating__01ae2 {
@@ -102,7 +114,7 @@ section.container__9293f {
     padding-left: var(--space-xs) !important;
 }
 
-.outer_c0bea0:not(.custom-profile-theme) > .inner_c0bea0 {
+.outer_c0bea0:not(.custom-theme-background) > .inner_c0bea0 {
     background-color: var(--background-tertiary) !important;
 }
 
@@ -166,23 +178,32 @@ div:has(> .wrapper__1405b) {
     gap: var(--space-xs);
 }
 
-.theme-midnight main > section.container__9293f {
+main > section.container__9293f,
+:not(.headerWrapper_cb9592) > .subtitleContainer_f75fb0,
+.user-profile-sidebar .inner_c0bea0,
+.content_f75fb0,
+.tabBody__133bf {
     border-left: 1px solid var(--border-subtle);
 }
 
-.theme-midnight .panel_c0bea0 .inner_c0bea0 {
+.callContainer_cb9592 {
     border-left: 1px solid var(--border-subtle);
+    border-top: none !important;
 }
 
-.theme-midnight .sidebarRegion__23e6b {
+.noChat_cb9592:has(> .callContainer_cb9592) {
+    border-top: 1px solid var(--border-subtle);
+}
+
+.sidebarRegion__23e6b {
     border-right: 1px solid var(--border-subtle);
 }
 
-.theme-midnight .accountProfileCard__1fed1 {
+.accountProfileCard__1fed1 {
     border: 1px solid var(--border-subtle);
 }
 
-.theme-midnight .biteSize_c0bea0 .inner_c0bea0 {
+.user-profile-popout .inner_c0bea0 {
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
 }
