@@ -2,7 +2,7 @@
  * @name UI Refresh Refresh
  * @author programmer2514
  * @description Enjoy Discord's UI refresh without the visual inconsistencies.
- * @version 1.2.0
+ * @version 1.2.1
  */
 
 :root {
@@ -30,7 +30,7 @@
 }
 
 .tree_ef3116 {
-    padding-top: var(--space-sm) !important;
+    padding-top: var(--space-xs) !important;
 }
 
 [data-windows="true"] .title_c38106 {
