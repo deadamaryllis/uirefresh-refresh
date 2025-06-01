@@ -2,7 +2,7 @@
  * @name UI Refresh Refresh
  * @author programmer2514
  * @description Enjoy Discord's UI refresh without the visual inconsistencies.
- * @version 1.2.1
+ * @version 1.2.2
  */
 
 :root {
@@ -189,6 +189,14 @@ main > section.container__9293f,
 .callContainer_cb9592 {
     border-left: 1px solid var(--border-subtle);
     border-top: none !important;
+}
+
+.colorable_f1ceac.disconnect_f1ceac {
+    border: 1px solid var(--status-danger);
+}
+
+.colorable_f1ceac.disconnect_f1ceac:hover {
+    border: 1px solid var(--red-460);
 }
 
 .noChat_cb9592:has(> .callContainer_cb9592) {
