@@ -2,7 +2,7 @@
  * @name UI Refresh Refresh
  * @author programmer2514
  * @description Enjoy Discord's UI refresh without the visual inconsistencies.
- * @version 1.2.2
+ * @version 1.2.3
  */
 
 :root {
@@ -33,7 +33,7 @@
     padding-top: var(--space-xs) !important;
 }
 
-[data-windows="true"] .title_c38106 {
+.platform-win .title_c38106 {
     justify-content: start;
     margin-left: var(--space-xs);
 }
@@ -63,7 +63,7 @@
 }
 
 .scrollableContainer__74017 {
-    background: var(--bg-overlay-floating,var(--background-base-low))
+    background: var(--bg-overlay-floating, var(--background-base-low))
 }
 
 .inner__74017 > * {
@@ -78,7 +78,7 @@
 .typing_b88801 {
     top: calc(0px - var(--space-24));
     left: 0 !important;
-    background: var(--background-secondary);
+    background: var(--background-base-lower);
     padding-left: var(--space-16);
 }
 
@@ -115,7 +115,7 @@ section.container__9293f {
 }
 
 .outer_c0bea0:not(.custom-theme-background) > .inner_c0bea0 {
-    background-color: var(--background-tertiary) !important;
+    background-color: var(--bg-base-tertiary) !important;
 }
 
 .wrapper__1405b,
@@ -141,7 +141,7 @@ div:has(> .wrapper__1405b) {
 
 .contentRegion__23e6b,
 .contentRegionScroller__23e6b {
-    background: var(--background-secondary) !important;
+    background: var(--background-base-lower) !important;
 }
 
 .settingsPage_f131e9 > h3 {
