@@ -1,4 +1,4 @@
-/**
+    /**
  * @name UI Refresh Refresh
  * @author programmer2514
  * @description Enjoy Discord's UI refresh without the visual inconsistencies.
@@ -92,22 +92,8 @@
     height: calc(100% - var(--custom-channel-header-height)) !important;
 }
 
-.chatLayerWrapper__01ae2 > * {
-    border-radius: 0;
-    width: var(--uirr-forum-panel-width) !important;
-    transition: width var(--cui-transition-speed);
-}
-
 .floating__01ae2 {
     filter: none;
-}
-
-.resizeHandle__01ae2 {
-    display: none;
-}
-
-div:not([class])[style^="min-width"] {
-    display: none;
 }
 
 section.container__9293f {
