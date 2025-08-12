@@ -2,7 +2,7 @@
  * @name UI Refresh Refresh
  * @author programmer2514
  * @description Enjoy Discord's UI refresh without the visual inconsistencies.
- * @version 1.2.3
+ * @version 1.3.0
  */
 
 :root {
@@ -19,7 +19,8 @@
 }
 
 .sidebarListRounded_c48ade,
-.sidebar_c48ade {
+.sidebar_c48ade,
+.page_c48ade {
     border-radius: 0 !important;
     border-left: none !important;
 }
@@ -175,7 +176,58 @@ div:has(> .wrapper__1405b) {
 }
 
 .bd-links {
-    gap: var(--space-xs);
+    gap: var(--space-sm);
+}
+
+.bd-links .bd-addon-button:not(:first-child) {
+    margin-left: 0 !important;
+}
+
+.bd-addon-store-modal {
+    max-height: 90vh !important;
+    overflow: hidden !important;
+}
+
+.bf-toolbar {
+    gap: var(--space-8) !important;
+}
+
+.bf-visible,
+.bf-hover:hover {
+    overflow: visible !important;
+}
+
+.bf-toolbar::before {
+    background: var(--background-base-low) !important;
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--border-subtle);
+    height: calc(100% - 16px) !important;
+    left: -4px !important;
+}
+
+.bf-toolbar .format {
+    padding: 0px !important;
+    width: var(--space-32) !important;
+    height: var(--space-32) !important;
+}
+
+.bf-toolbar .format:hover {
+    background: transparent !important;
+}
+
+.theme-light .bf-toolbar .format > *,
+.theme-light .bf-toolbar .bf-arrow {
+    filter: invert(1);
+}
+
+.bf-toolbar .format > * {
+    width: 22px !important;
+    height: auto !important;
+}
+
+.bf-toolbar .format:hover > * {
+    opacity: 1;
+    animation: buttonWiggle 800ms linear 0s 1 normal none;
 }
 
 main > section.container__9293f,
@@ -227,4 +279,22 @@ main > section.container__9293f,
         width: 450px;
         height: 100%;
     }
+}
+
+@keyframes buttonWiggle {
+  0%,
+  100% {
+	transform: rotate(0deg);
+	transform-origin: 50% 100%;
+  }
+
+  20%,
+  40% {
+	transform: rotate(3deg);
+  }
+
+  60%,
+  80% {
+	transform: rotate(-3deg);
+  }
 }
